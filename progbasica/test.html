@@ -25,7 +25,7 @@
   <p>P: Peso (N)</p>
   <p>g: Gravedad del planeta donde te encuentres (m/s2)</p>
   <strong><p>1 Newtown = 9.807</p></strong>
-  <h1>
+  <h3>
     <script>
       var gravedad_tierra = 9.81;
       var gravedad_marte = 3.7;
@@ -39,11 +39,11 @@
       var nmarte;
       ntierra = ptierra * 9.807;
       masa_corporal = ntierra / gravedad_tierra;
-      masa_corporal = parseInt(masa_corporal);
-      pmarte = parseInt(pmarte);
+      masa_corporal = masa_corporal.toFixed(2);
+      pmarte = pmarte.toFixed(2);
       nmarte = pmarte * 9.807;
       document.write("Esta persona tiene una masa corporal de " + masa_corporal +" Kg, en la tierra esto pesa " + ptierra + " Kgf lo que equivale a " + ntierra + " N, en marte la misma masa corporal pesa " + pmarte +" Kgf, lo que equivale a " + nmarte + " N");
     </script>
-  </h1>
+  </h3>
 </body>
 </html>
