@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tu peso en otros planetas del sistema solar</title>
+  <style>
+    body
+    {
+      background-color: black;
+      color: white;
+      font-family: Helvetica;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tu peso en marte, la tierra y jupiter</h1>
+  <strong><p>Pm = Pt * Gm / Gt</p></strong>
+  <p>Donde:</p>
+  <p>Pm: Peso en marte(Kgf)</p>
+  <p>Pt: Peso tierra (Kgf)</p>
+  <p>Gm: Gravedad en marte (m/s2)</p>
+  <p>Gt: Gravedad en la tierra</p>
+  <p>En fisica clasica sabemos que:</p>
+  <strong><p>P = m * g </p></strong>
+  <p>m: Masa corporal (kg)</p>
+  <p>P: Peso (N)</p>
+  <p>g: Gravedad del planeta donde te encuentres (m/s2)</p>
+  <strong><p>1 Newtown = 9.807</p></strong>
+  <h1>
+    <script>
+      var gravedad_tierra = 9.81;
+      var gravedad_marte = 3.7;
+      var gravedad_jupiter = 24.8;
+      var masa_corporal;
+      var pmarte;
+      var pjupiter;
+      var ptierra = 77;
+      var ntierra;
+      pmarte = ptierra * gravedad_marte / gravedad_tierra;
+      var nmarte;
+      ntierra = ptierra * 9.807;
+      masa_corporal = ntierra / gravedad_tierra;
+      masa_corporal = parseInt(masa_corporal);
+      pmarte = parseInt(pmarte);
+      nmarte = pmarte * 9.807;
+      document.write("Esta persona tiene una masa corporal de " + masa_corporal +" Kg, en la tierra esto pesa " + ptierra + " Kgf lo que equivale a " + ntierra + " N, en marte la misma masa corporal pesa " + pmarte +" Kgf, lo que equivale a " + nmarte + " N");
+    </script>
+  </h1>
+</body>
+</html>
