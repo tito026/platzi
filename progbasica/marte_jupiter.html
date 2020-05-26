@@ -28,6 +28,7 @@
   <h3>
     <script>
       var usuario = prompt("Cual es tu peso?");
+      var usuario_planeta = prompt("Elije tu planeta:\n 1 es marte y 2 es jupiter");
       var gravedad_tierra = 9.81;
       var gravedad_marte = 3.7;
       var gravedad_jupiter = 24.8;
@@ -36,16 +37,29 @@
       var pjupiter;
       var ptierra = parseInt(usuario);
       var ntierra;
-      pmarte = ptierra * gravedad_marte / gravedad_tierra;
       var nmarte;
+      var njupiter;
+      //Tierra----------------------
       ntierra = ptierra * 9.807;
       ntierra = ntierra.toFixed(2);
       masa_corporal = ntierra / gravedad_tierra;
       masa_corporal = masa_corporal.toFixed(2);
+      if (planeta == 1)
+      {
+        
+      }
+      //Marte----------------------
+      pmarte = ptierra * gravedad_marte / gravedad_tierra;
       pmarte = pmarte.toFixed(2);
       nmarte = pmarte * 9.807;
       nmarte = nmarte.toFixed(2);
       document.write("Esta persona tiene una masa corporal de " + masa_corporal +" Kg, en la tierra esto pesa " + ptierra + " Kgf lo que equivale a " + ntierra + " N, en marte la misma masa corporal pesa " + pmarte +" Kgf, lo que equivale a " + nmarte + " N");
+      //Jupiter----------------------
+      pjupiter = ptierra * gravedad_jupiter / gravedad_tierra;
+      pjupiter = pjupiter.toFixed(2);
+      njupiter = pjupiter * 9.807;
+      njupiter = njupiter.toFixed(2);
+      document.write("\n\n\nEsta persona tiene una masa corporal de " + masa_corporal +" Kg, en la tierra esto pesa " + ptierra + " Kgf lo que equivale a " + ntierra + " N, en jupiter la misma masa corporal pesa " + pjupiter +" Kgf, lo que equivale a " + njupiter + " N");
     </script>
   </h3>
 </body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tu peso en otros planetas del sistema solar</title>
+  <style>
+    body
+    {
+      background-color: black;
+      color: white;
+      font-family: Helvetica;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tu peso en marte, la tierra y jupiter</h1>
+  <strong><p>Pm = Pt * Gm / Gt</p></strong>
+  <p>Donde:</p>
+  <p>Pm: Peso en marte(Kgf)</p>
+  <p>Pt: Peso tierra (Kgf)</p>
+  <p>Gm: Gravedad del planeta (m/s2)</p>
+  <p>Gt: Gravedad en la tierra</p>
+  <p>En fisica clasica sabemos que:</p>
+  <strong><p>P = m * g </p></strong>
+  <p>m: Masa corporal (kg)</p>
+  <p>P: Peso (N)</p>
+  <p>g: Gravedad del planeta donde te encuentres (m/s2)</p>
+  <strong><p>1 Newtown = 9.807</p></strong>
+  <h3>
+    <script>
+      var usuario = prompt("Cual es tu peso?");
+      var usuario_planeta = prompt("Elije tu planeta:\n 1 es marte y 2 es jupiter");
+      var gravedad_tierra = 9.81;
+      var gravedad_marte = 3.7;
+      var gravedad_jupiter = 24.8;
+      var masa_corporal;
+      var peso_final;
+      var peso_final;
+      var ptierra = parseInt(usuario);
+      var ntierra;
+      var newtons_final;
+      var newtons_final;
+      var name_planet;
+      //Tierra----------------------
+      ntierra = ptierra * 9.807;
+      ntierra = ntierra.toFixed(2);
+      masa_corporal = ntierra / gravedad_tierra;
+      masa_corporal = masa_corporal.toFixed(2);
+      if (usuario_planeta == 1)
+      {
+        //Marte----------------------
+        peso_final = ptierra * gravedad_marte / gravedad_tierra;
+        peso_final = peso_final.toFixed(2);
+        newtons_final = peso_final * 9.807;
+        newtons_final = newtons_final.toFixed(2);
+        name_planet = "marte";
+      }
+      else if (usuario_planeta == 2)
+      {
+        //Jupiter----------------------
+        peso_final = ptierra * gravedad_jupiter / gravedad_tierra;
+        peso_final = peso_final.toFixed(2);
+        newtons_final = peso_final * 9.807;
+        newtons_final = newtons_final.toFixed(2);
+        name_planet = "jupiter";
+      }
+      else
+      {
+        name_planet = "tu casa"
+        peso_final = "1000000000";
+        newtons_final = "100000000000"
+      }
+      document.write("Tienes una masa corporal de " + masa_corporal +" Kg, en la tierra esto pesa " + ptierra + " Kgf lo que equivale a " + ntierra + " N, en "+ name_planet +" tu masa corporal pesa " + peso_final +" Kgf, lo que equivale a " + newtons_final + " N");
+    </script>
+  </h3>
+</body>
+</html>
