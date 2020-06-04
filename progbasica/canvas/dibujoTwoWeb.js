@@ -2,8 +2,8 @@ var box = document.getElementById("myCanvas");
 var lienzo = box.getContext("2d");
 var colorcito = "orange";
 var inicioCanvas = 0;
-var limiteCanvas = 1000;
-var limiteFigura = 500;
+var limiteCanvas = 600;
+var limiteFigura = 300;
 var plus, less, plusHalf, lessHalf;
 for(var x = 1; x < limiteCanvas; x += 10)
 {
@@ -32,10 +32,10 @@ dibujarLinea(1,colorcito, inicioCanvas,limiteFigura,limiteCanvas,limiteFigura);
 dibujarLinea(1,colorcito, limiteFigura,inicioCanvas,limiteFigura,limiteCanvas);
 
 colorcito = "orange";
-dibujarLinea(2,colorcito, 1, 1, 1, limiteCanvas - 1);
-dibujarLinea(2,colorcito, 1, 1, limiteCanvas - 1, 1);
-dibujarLinea(2,colorcito, 1, limiteCanvas - 1, limiteCanvas - 1, limiteCanvas - 1);
-dibujarLinea(2,colorcito, limiteCanvas - 1, 1, limiteCanvas - 1, limiteCanvas - 1);
+dibujarLinea(2,colorcito, 1, 1, 1, 599);
+dibujarLinea(2,colorcito, 1, 1, 599, 1);
+dibujarLinea(2,colorcito, 1, 599, 599, 599);
+dibujarLinea(2,colorcito, 599, 1, 599, 599);
 
 function dibujarLinea(ancho,color,xinicial,yinicial,xfinal,yfinal)
 {
