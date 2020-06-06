@@ -1,29 +1,26 @@
 var box = document.getElementById('myCanvas');
 var lienzo = box.getContext('2d');
-var lineas = 61;
 var l = 0;
 var colorcito = "#ACF";
-var timesTen = 1, timesPlusOne = 1, timesLessOne = 300, timesPlusThree = 300;
+var timesTen = 1, timesPlusOne = 1, timesLessOne = half, timesPlusThree = half;
+var almost = box.width;
+var half = box.width/2;
+var lineas = (box.width/10) + 1;
+
 for(l = 0; l < lineas;l++)
 {
-	console.log("Linea " + l);
-	console.log("timesTen " + timesTen);
-	console.log("timesPlusOne " + timesPlusOne);
-	console.log("timesLessOne " + timesLessOne);
-	console.log("timesPlusThree " + timesPlusThree);
-
-	dibujarLinea(1, colorcito, 300, timesTen, timesLessOne, 599);
-	dibujarLinea(1, colorcito, 300, timesPlusOne, timesPlusThree, 599);
+	dibujarLinea(1, colorcito, half, timesTen, timesLessOne, almost);
+	dibujarLinea(1, colorcito, half, timesPlusOne, timesPlusThree, almost);
 	timesTen = 10 * l;
 	timesPlusOne = 10 * (l + 1);
-	timesLessOne = 300 - timesTen;
-	timesPlusThree = 300 + timesTen;
+	timesLessOne = half - timesTen;
+	timesPlusThree = half + timesTen;
 }
 
-dibujarLinea(2,colorcito, 1, 1, 1, 599);
-dibujarLinea(2,colorcito, 1, 1, 599, 1);
-dibujarLinea(2,colorcito, 1, 599, 599, 599);
-dibujarLinea(2,colorcito, 599, 1, 599, 599);
+dibujarLinea(2,colorcito, 1, 1, 1, almost);
+dibujarLinea(2,colorcito, 1, 1, almost, 1);
+dibujarLinea(2,colorcito, 1, almost, almost, almost);
+dibujarLinea(2,colorcito, almost, 1, almost, almost);
 
 	function dibujarLinea(ancho,color,xinicial,yinicial,xfinal,yfinal)
 	{
