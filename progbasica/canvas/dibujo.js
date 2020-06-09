@@ -1,5 +1,5 @@
-var texto = document.getElementById("texto_lineas")
-var boton = document.getElementById("botoncito")
+var texto = document.getElementById("texto_lineas");
+var boton = document.getElementById("botoncito");
 boton.addEventListener("click", dibujoPorClick);
 
 var d = document.getElementById("myCanvas");

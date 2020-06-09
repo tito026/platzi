@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dibujando con canvas</title>
+    <style>
+      body
+      {
+        background-color: black;
+        color: white;
+        font-family: Helvetica;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align:center;">
+      <h1>Dibujo en canvas</h1>
+      <p>
+        Cuanto espacio entre lineas quieres?
+        <input type="text" id="betweenLines">
+        <input type="button" value="A darle!" id="botoncito" />
+      </p>
+      <canvas width="600" height="600" id="myCanvas" align=center></canvas>
+      <p>Asi queda tu dibujo</p>
+    </div>
+    <script src=dibujoR.js></script>
+  </body>
+</html>

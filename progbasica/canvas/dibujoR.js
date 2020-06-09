@@ -1,99 +1,35 @@
 var box = document.getElementById('myCanvas');
 var lienzo = box.getContext('2d');
-// var blacks = '#64dd17';
-var blacks = 'black';
+var texto = document.getElementById("betweenLines");
+var boton = document.getElementById("botoncito");
+boton.addEventListener("click", dibujoPorClick);
+var colorcito = "white";
 
-var  first = 0;
-var  second = 0;
-var  third = 600;
-var  fourth = 600;
+function dibujoPorClick()
+{
+	var espacioLineas = parseInt(texto.value);
+	var  first = 0;
+	var  second = 0;
+	var  third = box.width;
+	var  fourth = box.height;
+	var limite = box.width / 2;
 
-	function dibujarRectangulo()
+	while(first < limite)
 	{
-		lienzo.strokeStyle = blacks;
-		lienzo.beginPath();
-		lienzo.lineWidth = 1;
-		lienzo.strokeRect(first,second,third,fourth);
-		lienzo.stroke();
-		lienzo.closePath();
-		first = first + 4;
-		second = second + 4;
-		third = third - 8;
-		fourth = fourth - 8;
+		dibujarRectangulo(first,second,third,fourth);
+		first = first + espacioLineas;
+		second = second + espacioLineas;
+		third = third - (espacioLineas * 2);
+		fourth = fourth - (espacioLineas * 2);
+		console.log(espacioLineas);
 	}
-
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
-dibujarRectangulo();
+}
+function dibujarRectangulo(xi,yi,xf,yf)
+{
+	lienzo.strokeStyle = colorcito;
+	lienzo.beginPath();
+	lienzo.lineWidth = 1;
+	lienzo.strokeRect(xi,yi,xf,yf);
+	lienzo.stroke();
+	lienzo.closePath();
+}
