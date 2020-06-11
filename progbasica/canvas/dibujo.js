@@ -3,9 +3,9 @@ var boton = document.getElementById("botoncito");
 boton.addEventListener("click", dibujoPorClick);
 
 var d = document.getElementById("myCanvas");
+var lienzo = d.getContext("2d");
 var ancho = d.width;
 //alert(ancho);
-var lienzo = d.getContext("2d");
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
 {
