@@ -17,10 +17,10 @@ function dibujoPorClick()
 	while(first < limite)
 	{
 		dibujarRectangulo(first,second,third,fourth);
-		first = first + espacioLineas;
-		second = second + espacioLineas;
-		third = third - (espacioLineas * 2);
-		fourth = fourth - (espacioLineas * 2);
+		first += espacioLineas;
+		second += espacioLineas;
+		third -= (espacioLineas * 2);
+		fourth -= (espacioLineas * 2);
 		console.log(espacioLineas);
 	}
 }
