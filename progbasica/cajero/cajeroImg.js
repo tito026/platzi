@@ -59,7 +59,7 @@ function entregarDinero()
     {
       if(e.cantidad > 0)
       {
-        element.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
+        element.innerHTML = e.cantidad + " billetes de $" + e.valor + "<br />";
       }
     }
   }
