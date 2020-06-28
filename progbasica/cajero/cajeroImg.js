@@ -6,9 +6,27 @@ class Billete
     this.cantidad = c;
   }
 }
+class Efectivo
+{
+  constructor(v)
+  {
 
+  }
+}
+var firstTime = true;
 function entregarDinero()
 {
+  if(!firstTime)
+  {
+    console.log("aqui");
+    resultado.removeChild(document.getElementById('last'));
+  }
+  firstTime = false;
+  var element = document.createElement("div");
+  element.setAttribute("id", "last");
+  element.appendChild(document.createTextNode("Holasas"));
+  document.getElementById('resultado').appendChild(element);
+
   var t = document.getElementById("dinero");
   dinero = parseInt(t.value);
   for(var bi of caja)
@@ -35,7 +53,10 @@ function entregarDinero()
 
   if(dinero > 0)
   {
-    resultado.innerHTML = "Soy un cajero malo, he sido malo y no puedo darte esa cantidad :(";
+    var element = document.createElement("div");
+    element.setAttribute("id", "last");
+    element.appendChild(document.createTextNode("Soy un cajero malo, he sido malo y no puedo darte esa cantidad :("));
+    document.getElementById('resultado').appendChild(element);
   }
   else
   {
