@@ -24,8 +24,6 @@ function entregarDinero()
   firstTime = false;
   var element = document.createElement("div");
   element.setAttribute("id", "last");
-  element.appendChild(document.createTextNode("Holasas"));
-  document.getElementById('resultado').appendChild(element);
 
   var t = document.getElementById("dinero");
   dinero = parseInt(t.value);
@@ -53,10 +51,7 @@ function entregarDinero()
 
   if(dinero > 0)
   {
-    var element = document.createElement("div");
-    element.setAttribute("id", "last");
-    element.appendChild(document.createTextNode("Soy un cajero malo, he sido malo y no puedo darte esa cantidad :("));
-    document.getElementById('resultado').appendChild(element);
+    element.innerHTML = "Soy un cajero malo, he sido malo y no puedo darte esa cantidad :(";
   }
   else
   {
@@ -64,10 +59,11 @@ function entregarDinero()
     {
       if(e.cantidad > 0)
       {
-              resultado.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
+        element.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
       }
     }
   }
+  document.getElementById('resultado').appendChild(element);
 }
 
 var caja = [];
