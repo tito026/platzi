@@ -1,10 +1,9 @@
+
 class Pakiman
 {
-  constructor(n, v, a, c)
+  constructor(n, c)
   {
     this.nombre = n;
-    this.vida = v;
-    this.ataque = a;
     this.cantidad = c;
   }
   nacer(array)
@@ -14,6 +13,7 @@ class Pakiman
       var newName = this.nombre + i;
       console.log(newName);
       array.push(new Pakis(this.nombre, newName));
+
     }
   }
 }
@@ -21,6 +21,8 @@ class Pakis
 {
   constructor(tipo,name)
   {
+    this.vida = aleatorio(30,120);
+    this.ataque = aleatorio(30,120);
     this.tipo = tipo;
     this.nombre = name;
     this.imagen = new Image();
@@ -39,4 +41,10 @@ class Pakis
   {
     alert(this.nombre);
   }
+}
+function aleatorio(min, maxi)
+{
+  var resultado;
+  resultado = Math.floor(Math.random() * (maxi - min + 1)) + min;
+  return resultado;
 }

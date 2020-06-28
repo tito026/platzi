@@ -8,9 +8,11 @@ class Billete
 }
 class Efectivo
 {
-  constructor(v)
+  constructor(valor)
   {
-
+    this.tipo = "pesos" + valor;
+    this.imagen = new Image();
+    this.imagen.src = imagenes[this.tipo];
   }
 }
 var firstTime = true;
@@ -59,7 +61,8 @@ function entregarDinero()
     {
       if(e.cantidad > 0)
       {
-        element.innerHTML = e.cantidad + " billetes de $" + e.valor + "<br />";
+          var name = e.valor+"p.jpg" ;
+          element.innerHTML = "<img src='"+name+"'/>"  + e.valor + "<br />";
       }
     }
   }
@@ -68,14 +71,22 @@ function entregarDinero()
 
 var caja = [];
 var entregado = [];
+caja.push( new Billete(500, 5) );
+caja.push( new Billete(200, 10) );
 caja.push( new Billete(100, 5) );
 caja.push( new Billete(50, 10) );
 caja.push( new Billete(20, 5) );
-caja.push( new Billete(10, 10) );
-caja.push( new Billete(5, 5) );
 var dinero = 0;
 var div = 0;
 var papeles = 0;
+
+var imagenes = [];
+for (var tipos of caja)
+{
+  var name = "pesos"+ tipos.valor;
+  var url = tipos.valor + "p.jpg";
+  imagenes[name] = url;
+}
 
 var resultado = document.getElementById("resultado");
 var b = document.getElementById("extraer");
