@@ -9,6 +9,7 @@ class Billete
 
 function entregarDinero()
 {
+  var entregado = [];
   var t = document.getElementById("dinero");
   dinero = parseInt(t.value);
   for(var bi of caja)
@@ -50,7 +51,6 @@ function entregarDinero()
 }
 
 var caja = [];
-var entregado = [];
 caja.push( new Billete(100, 5) );
 caja.push( new Billete(50, 10) );
 caja.push( new Billete(20, 5) );

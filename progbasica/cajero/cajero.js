@@ -1,5 +1,5 @@
 var caja = [];
-var entregado = [];
+
 caja.push( new Billete(500, 10));
 caja.push( new Billete(200, 10));
 caja.push( new Billete(100, 20));

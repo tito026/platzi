@@ -38,6 +38,7 @@ class Billete
 
 function entregarDinero()
 {
+  var entregado = [];
   var t = document.getElementById("dinero");
   dinero = parseInt(t.value);
   for(var bi of caja)
